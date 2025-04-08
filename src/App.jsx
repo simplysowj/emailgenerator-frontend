@@ -5,6 +5,7 @@ import EmailCampaignList from './components/EmailCampaignList';
 import EmailCampaignDetail from './components/EmailCampaignDetail';
 import CreateCampaign from './components/CreateCampaign';
 import HomePage from './components/HomePage';
+import './styles/global.css'; // Add this import
 
 const App = () => {
   useEffect(() => {
