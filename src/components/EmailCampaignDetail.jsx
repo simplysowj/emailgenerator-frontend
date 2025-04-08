@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import api from '../axios';
 import styles from './EmailCampaignDetail.module.css';
+import ProcessRepliesButton from './ProcessRepliesButton';
+
 
 const EmailCampaignDetail = () => {
   const { id } = useParams();
@@ -138,6 +140,7 @@ const EmailCampaignDetail = () => {
 
   return (
     <div className={styles.container}>
+      
       <div className={styles.header}>
         <div className={styles.campaignInfo}>
           <h1 className={styles.campaignName}>{campaign.name}</h1>
@@ -309,6 +312,13 @@ const EmailCampaignDetail = () => {
           </div>
         )}
       </div>
+      <div className={`${styles.section} ${styles.replySection}`}>
+        <div className={styles.sectionHeader}>
+          <h2>Reply Management</h2>
+        </div>
+        <ProcessRepliesButton campaignId={id} />
+      </div>
+      
     </div>
   );
 };

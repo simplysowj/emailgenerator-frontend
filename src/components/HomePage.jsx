@@ -3,6 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './HomePage.module.css';
 
+
 const HomePage = () => {
   return (
     <div className={styles.container}>
@@ -24,6 +25,8 @@ const HomePage = () => {
           <Link to="/campaigns">
             <button className={styles.secondaryButton}>View Campaigns</button>
           </Link>
+             
+          
         </div>
       </div>
     </div>
