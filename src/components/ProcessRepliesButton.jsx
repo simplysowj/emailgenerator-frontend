@@ -8,7 +8,7 @@ const ProcessRepliesButton = ({ campaignId }) => {
 
   const fetchStats = async () => {
     try {
-      const response = await axios.get(`/api/campaigns/${campaignId}/reply_stats/`);
+      const response = await axios.get(`http://localhost:8000/api/campaigns/${campaignId}/reply_stats/`);
       setStats(response.data);
     } catch (err) {
       console.error("Error fetching stats:", err);
