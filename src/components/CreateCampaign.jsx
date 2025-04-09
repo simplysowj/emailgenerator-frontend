@@ -71,7 +71,7 @@ const CreateCampaign = () => {
         formDataToSend.append('attachments', file);
       });
 
-      const res = await fetch('http://localhost:8000/api/campaigns/', {
+      const res = await fetch('https://email-backend-bee9bjdec6gkhuf3.eastus2-01.azurewebsites.net/api/campaigns/', {
         method: 'POST',
         body: formDataToSend,
       });
