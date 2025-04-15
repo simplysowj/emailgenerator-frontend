@@ -181,7 +181,7 @@ const EmailCampaignDetail = () => {
         )}
 
         <div className={styles.importSection}>
-          <h3>Import Recipients</h3>
+          <h3>Import Recipients( csv file with column names email,name)</h3>
           <form onSubmit={handleImportRecipients} className={styles.importForm}>
             <label className={styles.fileInputLabel}>
               <input 
