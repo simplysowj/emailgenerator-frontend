@@ -8,7 +8,7 @@ const ProcessRepliesButton = ({ campaignId }) => {
 
   const fetchStats = async () => {
     try {
-      const response = await axios.get(`http://localhost:8000/api/campaigns/${campaignId}/reply_stats/`);
+      const response = await axios.get(`http://email-backend-bee9bjdec6gkhuf3.eastus2-01.azurewebsites.net/api/campaigns/${campaignId}/reply_stats/`);
       setStats(response.data);
     } catch (err) {
       console.error("Error fetching stats:", err);
@@ -19,7 +19,7 @@ const ProcessRepliesButton = ({ campaignId }) => {
     setLoading(true);
     setError(null);
     try {
-      const response = await axios.post(`http://localhost:8000/api/campaigns/${campaignId}/process_replies/`);
+      const response = await axios.post(`http://email-backend-bee9bjdec6gkhuf3.eastus2-01.azurewebsites.net/api/campaigns/${campaignId}/process_replies/`);
       
       setStats(response.data.stats);
     } catch (err) {
