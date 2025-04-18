@@ -5,6 +5,7 @@ import EmailCampaignList from './components/EmailCampaignList';
 import EmailCampaignDetail from './components/EmailCampaignDetail';
 import CreateCampaign from './components/CreateCampaign';
 import HomePage from './components/HomePage';
+import Login from "./components/Login.jsx";
 import './styles/global.css'; // Add this import
 
 const App = () => {
@@ -21,6 +22,7 @@ const App = () => {
     <Router>
       <Routes>
         <Route path="/campaigns" element={<EmailCampaignList />} />
+        <Route path="/" element={<Login />} />
         <Route path="/" element={<HomePage />} />
         <Route path="/create" element={<CreateCampaign />} />
         <Route path="/campaigns/:id" element={<EmailCampaignDetail />} />
